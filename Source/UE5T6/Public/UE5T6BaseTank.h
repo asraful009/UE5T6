@@ -18,10 +18,18 @@ class UE5T6_API AUE5T6BaseTank : public AUE5T6BasePawn
 public:
     AUE5T6BaseTank();
 
+protected:
+    virtual void BeginPlay() override;
+
+    
+    virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+    
 private:
     UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category="Components", meta=(AllowPrivateAccess="true"))
     TObjectPtr<USpringArmComponent> SpringArmComponent;
 
     UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category="Components", meta=(AllowPrivateAccess="true"))
     TObjectPtr<UCameraComponent> CameraComponent;
+
+    
 };

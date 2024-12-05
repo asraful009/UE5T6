@@ -13,3 +13,14 @@ AUE5T6BaseTank::AUE5T6BaseTank()
     CameraComponent = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera Component"));
     CameraComponent->SetupAttachment(SpringArmComponent);
 }
+
+void AUE5T6BaseTank::BeginPlay()
+{
+    Super::BeginPlay();
+}
+
+void AUE5T6BaseTank::SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent)
+{
+    Super::SetupPlayerInputComponent(PlayerInputComponent);
+    
+}
